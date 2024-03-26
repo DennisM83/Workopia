@@ -2,4 +2,4 @@
 
     require '../helpers.php';
 
-    require basePath('views/home.views.php');
+     loadView('home');
