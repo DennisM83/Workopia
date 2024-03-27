@@ -19,7 +19,13 @@
   */
 
   function loadView($name) {
-    require basePath("views/{$name}.views.php");
+    $loadPath = basePath("views/{$name}.views.php");
+
+    if (file_exists($loadPath)) {
+        require $loadPath;
+    } else {
+        echo "Path {$name} does not exists in partials";
+    }
   }
 
   /**
@@ -29,5 +35,11 @@
   * @return void
   */
   function loadPartial($name) {
-    require "views/partials/{$name}.php";
+    $partialPath = basePath("views/partials/{$name}.php");
+
+    if (file_exists($partialPath)) {
+        require $partialPath;
+    } else {
+        echo "Path {$name} does not exists in partials";
+    }
   }
