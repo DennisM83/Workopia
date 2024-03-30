@@ -24,7 +24,7 @@
     if (file_exists($loadPath)) {
         require $loadPath;
     } else {
-        echo "Path {$name} does not exists in partials";
+        echo "Path {$name} does not exists in view";
     }
   }
 
