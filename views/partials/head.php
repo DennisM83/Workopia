@@ -10,4 +10,4 @@
   </head>
   <body class="bg-gray-100">
 
-  <?php require basePath('views/partials/footer.php'); ?>
+  <?php loadPartial('footer'); ?>
