@@ -18,10 +18,11 @@
   * @return void
   */
 
-  function loadView($name) {
+  function loadView($name, $data = []) {
     $loadPath = basePath("views/{$name}.views.php");
 
     if (file_exists($loadPath)) {
+        extract($data);
         require $loadPath;
     } else {
         echo "Path {$name} does not exists in view";
@@ -68,4 +69,14 @@
     echo '<pre>';
     die(var_dump($value));
     echo '</pre>';
+   }
+
+   /**
+    * Format for salary
+    *
+    * @param string $salary
+    * @return Formatted salary
+    */
+   function formatSalary($salary) {
+    return '$' . number_format(floatval($salary));
    }
