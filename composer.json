@@ -1,0 +1,16 @@
+{
+    "name": "DennisM83/Workopia",
+    "description": "Job listing application",
+    "authors": [
+        {
+            "name": "Dennis Wenrich",
+            "email": "denmwen@outlook.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    }
+}
