@@ -11,7 +11,7 @@
     //     }
     // }
 
-    // Instatiate the router
+    // Instantiate the router
     $router = new Router();
 
     // Get routes
