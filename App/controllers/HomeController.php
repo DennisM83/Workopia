@@ -2,11 +2,15 @@
 
 namespace App\Controllers;
 
+use Exception;
 use Framework\Database;
 
 class HomeController {
     protected $db;
 
+    /**
+     * @throws Exception
+     */
     public function __construct()
     {
         $config = require basePath('config/db.php');
